@@ -8,11 +8,13 @@ public class Sumar {
         int numero2 = 0;
         int resultado = 0;
         
-        Util.encabezado("hola mundo", 50);  
-        Util.encabezado("bienvenidos a la programación en java", 70);  
         Util.encabezado("Suma de 2 numeros", 60); 
         
+        numero1 = Util.leerNumeroEntero("Ingrese el primer numero");
+        numero2 = Util.leerNumeroEntero("Ingrese el segundo numero");
+
         resultado = suma(numero1,numero2);
+        Util.linea(60);
         System.out.println("La suma es " + resultado);    
         Util.linea(60);
 
@@ -20,10 +22,5 @@ public class Sumar {
 
     private static int suma(int numero1, int numero2){return numero1 + numero2;}
 
-    public static void leerNumeroEntero(String msj){
-        
-        System.out.println(msj);
-
-    }
 
 }

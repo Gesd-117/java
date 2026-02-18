@@ -1,6 +1,9 @@
 package utilidades;
 
+import java.util.Scanner;
+
 public class Util {
+    public static Scanner teclado = new Scanner(System.in);
 
     private static String centrar(String texto, int largo) {
         int relleno = (largo - texto.length()) / 2;
@@ -17,5 +20,22 @@ public class Util {
         System.out.println(centrar(texto.toUpperCase(), largo));
         linea(largo);
     }
-}
 
+    public static int leerNumeroEntero(String msj) {
+        int numero = 0;
+
+        while (true) {
+            try {
+                System.out.print(msj + ": ");
+                numero = teclado.nextInt();
+                return numero;
+            } catch (Exception e) {
+                System.out.println("Debe escribir un numero entero");
+                teclado.next();
+            }
+
+        }
+
+    }
+
+}
