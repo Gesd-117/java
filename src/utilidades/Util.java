@@ -2,7 +2,7 @@ package utilidades;
 
 public class Util {
 
-    public static String centrar(String texto, int largo) {
+    private static String centrar(String texto, int largo) {
         int relleno = (largo - texto.length()) / 2;
         String textoCentrado = " ".repeat(relleno) + texto;
         return textoCentrado;
